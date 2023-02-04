@@ -1,6 +1,5 @@
 {
   "editor.tabSize": 2,
-
   // "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
   // "editor.formatOnPaste": false, // required
   // "editor.formatOnType": false, // required
@@ -9,7 +8,7 @@
   // //"files.autoSave": "onFocusChange", // optional but recommended
   "prettier.printWidth": 120,
   "prettier.tabWidth": 2,
-  "prettier.useTabs": false,
+  "prettier.useTabs": true,
   "prettier.semi": true,
   "prettier.trailingComma": "all",
   "prettier.singleQuote": true,
