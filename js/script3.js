@@ -11,8 +11,8 @@
 // Вывести сообщение 'На счету недостаточно средств для проведение операции!'
 // В конце вывести сообщение 'Операция завершена'
 
-let customerBalance;
-let paymentThisInvoice;
+// let customerBalance;
+// let paymentThisInvoice;
 
 // Используя конструкцию if else и  prompt, напиши код который запросит
 // вопрос "Какое официальное название JavaScript?". toUpperCase
@@ -50,3 +50,79 @@ let paymentThisInvoice;
 // Напиши скрипт який перевіряє чі закінчується значення
 // змінної link сімволом /. Якщо ні, додай до кінця
 // значення link цей символ (endWith())
+
+
+
+
+// Напиши скрипт який перевіряє чи закінчується значення
+// змінної link сімволом /. Якщо ні, додай до кінця
+// значення link цей символ...
+
+// let link = 'https://somesaite.com/about';
+
+// if (link.endsWith('/') === false) {
+//   console.log(link + '/',' Well!');
+// } else {
+//   console.log('Its OK! - / is already present');
+// }
+
+// console.log(link.slice(link.length - 1))
+
+// console.log(link.slice(link.length - 1) === '/');
+// console.log(link.endsWith('/'));
+
+// if (!link.endsWith('/')) {
+// 	link += '/';
+// 	// link = '${linr}/';
+// 	// link = link + '/';
+// }
+// console.log(link);
+
+
+// Напиши цикл for который выводит в консоль числа
+// по увеличению от min до max,
+// но только числа кратные 5
+
+// const min = 20;
+// const max = 100;
+
+// for (let i = min; i <= max; i +=1) {
+//   if (i%5 === 0 ){
+//     console.log(i);
+//   }
+// }
+
+// Напиши скрипт для відображення часу дедлайн здачі проєкту.
+// Використовуй if else.
+// Якщо дедлайн 0 днів - виведи 'Сьогодні'
+// Якщо дедлайн 1 день - виведи 'Завтра'
+// Якщо дедлайн 2 день - виведи 'Післязавтра'
+// Якщо дедлайн 3+ дні - виведи 'Дата в майбутньому'
+
+const dedlineDay = 4;
+
+// if (dedlineDay === 0) {
+//   console.log('Караул - дедлайн СЕГОДНЯ!!!');
+// } else if (dedlineDay === 1) {
+//   console.log('Торопись - дедлайн ЗАВТРА!!!');
+// } else if (dedlineDay === 2){
+//   console.log('Соберись - дедлайн ПОСЛЕЗАВТРА!!!');
+// } else  {
+//   console.log('Балдеем - дата дедлайна в далеком будущем!!!');
+// }
+
+// switch (dedlineDay) {
+// 	case 0:
+// 		console.log('Караул - дедлайн СЕГОДНЯ!!!');
+// 		break;
+// 	case 1:
+// 		console.log('Торопись - дедлайн ЗАВТРА!!!');
+// 		break;
+// 	case 2:
+// 		console.log('Соберись - дедлайн ПОСЛЕЗАВТРА!!!');
+//   break
+//   default:
+// 	console.log('Балдеем - дата дедлайна в далеком будущем!!!');
+// }
+
+
