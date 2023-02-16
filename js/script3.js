@@ -99,7 +99,7 @@
 // Якщо дедлайн 2 день - виведи 'Післязавтра'
 // Якщо дедлайн 3+ дні - виведи 'Дата в майбутньому'
 
-const dedlineDay = 4;
+// const dedlineDay = 4;
 
 // if (dedlineDay === 0) {
 //   console.log('Караул - дедлайн СЕГОДНЯ!!!');
@@ -158,3 +158,7 @@ const dedlineDay = 4;
 // console.log(getShippingCost("Chile"));
 // console.log(getShippingCost("Jamaica"));
 // console.log(getShippingCost("Sweden"));
+
+
+
+
