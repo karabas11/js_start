@@ -160,5 +160,186 @@
 // console.log(getShippingCost("Sweden"));
 
 
+// function makeArray(firstArray, secondArray, maxLength) {
+// 	// Change code below this line
+// 	const tottalArray = firstArray.concat(secondArray).slice(0, maxLength);
+// 	return tottalArray;
 
+// 	// Change code above this line
+// }
+
+// console.log(makeArray(['Mango', 'Poly'], ['Ajax', 'Chelsea'], 3));
+// console.log(makeArray(['Mango', 'Poly', 'Houston'], ['Ajax', 'Chelsea'], 4));
+// console.log(makeArray(['Mango'], ['Ajax', 'Chelsea', 'Poly', 'Houston'], 3));
+// console.log(makeArray(['Earth', 'Jupiter'], ['Neptune', 'Uranus'], 2));
+// console.log(makeArray(['Earth', 'Jupiter'], ['Neptune', 'Uranus'], 4));
+// console.log(makeArray(['Earth', 'Jupiter'], ['Neptune', 'Uranus', 'Venus'], 0));
+// // console.log(makeArray());
+
+// function calculateTotal(number) {
+//   // Change code below this line
+//   let sumNumber = 0;
+//   for (let i = 1; i <= number; i += 1) { // Change this line
+//     sumNumber = sumNumber + i;
+//   }
+//     return (sumNumber);
+//     // Change code above this line
+//   }
+
+// console.log(calculateTotal(1));
+// console.log(calculateTotal(3));
+// console.log(calculateTotal(7));
+// console.log(calculateTotal(18));
+// console.log(calculateTotal(24));
+// console.log(calculateTotal(0));
+// console.log(calculateTotal(11));
+
+// function findLongestWord(string) {
+//   // Change code below this line
+// const stringArray = string.split(" ");
+// // console.log(stringArray);
+// // console.log(stringArray.length);
+// // console.log(typeof stringArray);
+//   let longestWord = '';
+//   // console.log(longestWord.length);
+// for (let i = 0; i < stringArray.length; i += 1) {
+//   if (longestWord.length < stringArray[i].length) {
+//     longestWord = stringArray[i];
+//   }
+// }
+// return longestWord;
+
+// }
+// console.log(findLongestWord("The quick brown fox jumped over the lazy dog"));
+// console.log(findLongestWord("Google do a roll"));
+// console.log(findLongestWord("May the force be with you"));
+
+// Вызов функции findLongestWord("The quick brown fox jumped over the lazy dog") возвращает jumped
+// Вызов функции findLongestWord("Google do a roll") возвращает Google
+// Вызов функции findLongestWord("May the force be with you") возвращает force
+
+// for (let i = 0; i < fruits.length; i += 1) { // Change this line
+//   const fruit = fruits[i]; // Change this line
+//   console.log(fruit);
+// }
+
+// 	const tottalArray = firstArray.concat(secondArray).slice(0, maxLength);
+// title.toLowerCase().split(' ').join('-');
+
+// function createArrayOfNumbers(min, max) {
+// 	const numbers = [];
+// 	// Change code below this line
+//   for (let i = min; i <= max ; i += 1) {
+// 	  numbers.push(i);
+//     }
+// 	// Change code above this line
+// 	return numbers;
+// }
+
+// console.log(createArrayOfNumbers(1, 3));
+// console.log(createArrayOfNumbers(14, 17));
+// console.log(createArrayOfNumbers(29, 34));
+// console.log(createArrayOfNumbers(9, 11));
+
+// Задача 2/23
+
+// Напиши функцию filterArray(numbers, value), которая принимает массив чисел (параметр numbers) и возвращает новый массив, в котором будут только те элементы массива numbers, которые больше чем значение параметра value (число).
+
+// Объявлена функция filterArray(numbers, value)
+// Вызов функции filterArray([1, 2, 3, 4, 5], 3) возвращает [4, 5]
+// Вызов функции filterArray([1, 2, 3, 4, 5], 4) возвращает [5]
+// Вызов функции filterArray([1, 2, 3, 4, 5], 5) возвращает []
+// Вызов функции filterArray([12, 24, 8, 41, 76], 38) возвращает [41, 76]
+// Вызов функции filterArray([12, 24, 8, 41, 76], 20) возвращает [24, 41, 76]
+// Вызов функции filterArray() со случайным массивом и числом возвращает правильный массив
+// В цикле for использовался метод push
+
+// function filterArray(numbers, value) {
+//   let numbersResult = [];
+//   for (let i = 0; i < numbers.length; i += 1) {
+//     // console.log(numbers);
+//     // console.log(numbers.length);
+//     if (numbers[i] > value) {
+//       // console.log(numbers);
+//       // console.log(value);
+//       numbersResult.push(numbers[i]);
+//     }
+//   }
+// return numbersResult;
+// }
+
+// console.log(filterArray([1, 2, 3, 4, 5], 3));
+// console.log(filterArray([1, 2, 3, 4, 5], 4));
+// console.log(filterArray([1, 2, 3, 4, 5], 5));
+// console.log(filterArray([12, 24, 8, 41, 76], 38));
+// console.log(filterArray([12, 24, 8, 41, 76], 20));
+
+// Задача 2/24
+
+// const planets = ["Earth", "Mars", "Venus"];
+
+// console.log(planets.includes("Earth")); // true
+// console.log(planets.includes("Mars")); // true
+// console.log(planets.includes("Venus")); // true
+// console.log(planets.includes("Jupiter")); // false
+
+// Функция checkFruit(fruit) принимает строку с названием фрукта (параметр fruit), и проверяет есть ли такой фрукт в массиве fruits.
+
+// Дополни код функции так, что если:
+
+// фрукт есть в массиве, то функция возвращает true;
+// фрукта нет в массиве, то функция возвращает false.
+// Объявлена функция checkFruit(fruit)
+// Вызов checkFruit("plum") возвращает true
+// Вызов checkFruit("mandarin") возвращает false
+// Вызов checkFruit("pear") возвращает true
+// Вызов checkFruit("Pear") возвращает false
+// Вызов checkFruit("apple") возвращает true
+// Вызов функции checkFruit() со случайным словом возвращает правильное значение boolean
+// В функции использовался метод includes
+
+// const clients = ['Mango', 'Ajax', 'Poly'];
+
+// for (const client of clients) {
+//   console.log(client);
+// }
+
+// function checkFruit(fruit) {
+//   const fruits = ['apple', 'plum', 'pear', 'orange'];
+//   let result 
+//   // console.table(fruits);
+//   // fruit = fruit.toLowerCase();
+//   for (let i = 0; i < fruits.length; i += 1) {
+//     //  console.log(fruits[i]);
+//     result = fruits.includes(fruit);
+//     // fruits = fruits.includes(fruit) ? true : false;
+
+//     return result;
+//   }
+// }
+// console.log(checkFruit('plum'));
+// console.log(checkFruit('mandarin'));
+// console.log(checkFruit("pear"));
+// console.log(checkFruit('Pear'));
+// console.log(checkFruit('apple'));
+
+
+// function checkFruit(fruit) {
+//   const fruits = ['apple', 'plum', 'pear', 'orange'];
+//   let result;
+//   // console.table(fruits);
+//   // fruit = fruit.toLowerCase();
+//   for (const i of fruits) {
+//     //  console.log(fruits[i]);
+//     result = fruits.includes(fruit);
+//     // fruits = fruits.includes(fruit) ? true : false;
+
+//     return result;
+//   }
+// }
+// console.log(checkFruit('plum'));
+// console.log(checkFruit('mandarin'));
+// console.log(checkFruit('pear'));
+// console.log(checkFruit('Pear'));
+// console.log(checkFruit('apple'));
 
