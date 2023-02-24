@@ -379,3 +379,29 @@
 // console.log(getCommonElements([12, 32, 3], [144, 120, 30, 12, 3]));
 // console.log(getCommonElements([], []));
 // console.log(getCommonElements([1, 3, 5], [0, 8, 5, 3]));
+
+// let a;
+// let b;
+
+// function myFn() {
+//   let b;
+//   a = true;
+//   b = 10;
+//   console.log(b);
+// }
+
+// myFn();
+
+// console.log(a);
+// console.log(b);
+
+// const a = 5;
+
+// function myFn() {
+//   function innerFn() {
+//     console.log(a);
+//   }
+//   innerFn();
+// }
+
+// myFn();
