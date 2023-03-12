@@ -1,1 +1,221 @@
 'use strict';
+// ЗАДАЧА 15
+// Если метод Object.keys(obj) возвращает массив ключей собственных свойств объекта, то метод Object.values(obj) возвращает массив значений его собственных свойств. Если в объекте нет свойств, метод Object.values(obj) вернёт пустой массив.
+
+// const book = {
+//   title: "The Last Kingdom",
+//   author: "Bernard Cornwell",
+//   rating: 8.38,
+// };
+// const keys = Object.keys(book);
+// console.log(keys); // ["title", "author", "rating"]
+
+// const values = Object.values(book);
+// console.log(values); // ["The Last Kingdom", "Bernard Cornwell", 8.38]
+// Массив значений свойств также можно перебрать циклом for...of, например для получения общей суммы числовых значений.
+
+// const apartment = {
+//   descr: 'Spacious apartment in the city center',
+//   rating: 4,
+//   price: 2153,
+// };
+// // Change code below this line
+// const keys = Object.keys(apartment);
+// const values = Object.values(apartment);
+
+// ЗАДАЧА 16
+// function countTotalSalary(salaries) {
+//   let totalSalary = 0;
+//   // Change code below this line
+//   const values = Object.values(salaries);
+//   for (const value of values) {
+//     totalSalary += value;
+//   }
+
+//   // Change code above this line
+//   return totalSalary;
+// }
+
+// console.log(countTotalSalary({}));
+// console.log(countTotalSalary({ mango: 100, poly: 150, alfred: 80 }));
+// console.log(countTotalSalary({ kiwi: 200, poly: 50, ajax: 150 }));
+
+// ЗАДАЧА 17
+// В стандартный набор повседневных задач разработчика входит манипуляция массивом однотипных объектов. Это значит что все объекты в массиве гарантированно будут иметь одинаковый набор свойств, но с разными значениями.
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+// ];
+// Для перебора такого массива используется стандартный цикл for...of. Значения свойств каждого объекта можно получить используя синтаксис «через точку», так как в каждом объекте набор свойств и их имена будут одинаковые, отличаются только значения.
+
+// for (const book of books) {
+//   // Объект книги
+//   console.log(book);
+//   // Название
+//   console.log(book.title);
+//   // Автор
+//   console.log(book.author);
+//   // Рейтинг
+//   console.log(book.rating);
+// }
+
+// const colors = [
+//   { hex: '#f44336', rgb: '244,67,54' },
+//   { hex: '#2196f3', rgb: '33,150,243' },
+//   { hex: '#4caf50', rgb: '76,175,80' },
+//   { hex: '#ffeb3b', rgb: '255,235,59' },
+// ];
+
+// const hexColors = [];
+// const rgbColors = [];
+// // Change code below this line
+// // const hexs = Object.keys(colors);
+// // const rgbs = Object.values(colors);
+
+// for (const color of colors) {
+//   hexColors.push(color.hex);
+//   // console.log(hexColors);
+//   rgbColors.push(color.rgb);
+//   // console.log(rgbColors);
+// }
+
+// ЗАДАЧА 18
+// const products = [
+//   { name: 'Radar', price: 1300, quantity: 4 },
+//   { name: 'Scanner', price: 2700, quantity: 3 },
+//   { name: 'Droid', price: 400, quantity: 7 },
+//   { name: 'Grip', price: 1200, quantity: 9 },
+// ];
+
+// function getProductPrice(productName) {
+//   for (const product of products) {
+//     if (productName === product.name) {
+//       return product.price;
+//     }
+//   }
+//   return null;
+// }
+
+// console.log(getProductPrice('Radar'));
+// console.log(getProductPrice('Grip'));
+// console.log(getProductPrice('Scanner'));
+// console.log(getProductPrice('Droid'));
+// console.log(getProductPrice('Engine'));
+
+// ЗАДАЧА 19
+// const products = [
+//   { name: 'Radar', price: 1300, quantity: 4 },
+//   { name: 'Scanner', price: 2700, quantity: 3 },
+//   { name: 'Droid', price: 400, quantity: 7 },
+//   { name: 'Grip', price: 1200, quantity: 9 },
+// ];
+
+// function getAllPropValues(propName) {
+//   const value = [];
+//   for (const product of products) {
+//     if (product[propName]) {
+//       // console.log(product[propName]);
+//       value.push(product[propName]);
+//     }
+//   }
+//   return value;
+// }
+
+// console.log(getAllPropValues('name'));
+// console.log(getAllPropValues('quantity'));
+// console.log(getAllPropValues('price'));
+// console.log(getAllPropValues('category'));
+
+// ЗАДАЧА 20
+// const products = [
+//   { name: 'Radar', price: 1300, quantity: 4 },
+//   { name: 'Scanner', price: 2700, quantity: 3 },
+//   { name: 'Droid', price: 400, quantity: 7 },
+//   { name: 'Grip', price: 1200, quantity: 9 },
+// ];
+
+// function calculateTotalPrice(productName) {
+//   let TotalPrice = 0;
+//   for (const product of products) {
+//     // console.log(product.name);
+//     // console.log(product.price);
+//     // console.log(product.quantity);
+//     if (product.name === productName) {
+//       // console.log(product.name);
+//       // console.log(product.price);
+//       // console.log(product.quantity);
+//       TotalPrice = product.price * product.quantity;
+//       //   console.log(product[productName]);
+//       //   console.log(product.price);
+//       // }
+//     }
+//   }
+//   return TotalPrice;
+// }
+
+// console.log(calculateTotalPrice('Blaster'));
+// console.log(calculateTotalPrice('Radar'));
+// console.log(calculateTotalPrice('Droid'));
+// console.log(calculateTotalPrice('Grip'));
+// console.log(calculateTotalPrice('Scanner'));
+
+// ЗАДАЧА 21
+// Сложные данные всегда представлены объектом. Множественные обращения к свойствам объекта визуально загрязняют код.
+
+// const book = {
+//   title: "The Last Kingdom",
+//   author: "Bernard Cornwell",
+//   genres: ["historical prose", "adventure"],
+//   public: true,
+//   rating: 8.38,
+// };
+
+// const accessType = book.public ? "публичном" : "закрытом";
+// const message = `Книга ${book.title} автора ${book.author} с рейтингом ${book.rating} находится в ${accessType} доступе.`;
+// Деструктуризация позволяет «распаковать» значения свойств объекта в локальные переменные. Это делает код в месте их использования менее «шумным».
+
+// const book = {
+//   title: "The Last Kingdom",
+//   author: "Bernard Cornwell",
+//   genres: ["historical prose", "adventure"],
+//   public: true,
+//   rating: 8.38,
+// };
+
+// // Деструктуризируем
+// const { title, author, public, rating, coverImage } = book;
+// console.log(coverImage); // undefined
+
+// const accessType = public ? "публичном" : "закрытом";
+// const message = `Книга ${title} автора ${author} с рейтингом ${rating} находится в ${accessType} доступе.`;
+// Деструктуризация всегда находится в левой части операции присвоения. Переменным внутри фигурных скобок присваиваются значения свойств объекта. Если имя переменной и имя свойства совпадают, то происходит присваивание, в противном случае ей будет присвоено undefined. Порядок объявления переменных в фигурных скобках не важен.
+
+// const highTemperatures = {
+//   yesterday: 28,
+//   today: 26,
+//   tomorrow: 33,
+// };
+// // Change code below this line
+
+// const { yesterday, today, tomorrow } = highTemperatures;
+
+// // Change code above this line
+
+// const meanTemperature = (yesterday + today + tomorrow) / 3;
+// console.log(meanTemperature);
+
+// ЗАДАЧА 21
