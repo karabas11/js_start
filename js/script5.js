@@ -391,6 +391,100 @@
 //   },
 // } = forecast;
 
+// ЗАДАЧА 26
+// Если функция принимает более двух-трёх аргументов, очень просто запутаться в какой последовательности что передавать. В результате получается очень неочевидный код в месте её вызова.
+
+// function doStuffWithBook(title, numberOfPages, downloads, rating, public) {
+//   // Делаем что-то с параметрами
+//   console.log(title);
+//   console.log(numberOfPages);
+//   // И так далее
+// }
+
+// // ❌ Что такое 736? Что такое 10283? Что такое true?
+// doStuffWithBook("Последнее королевство", 736, 10283, 8.38, true);
+// Паттерн «Объект настроек» помогает решить эту проблему, заменяя набор параметров всего одним - объектом с именованными свойствами.
+
+// function doStuffWithBook(book) {
+//   // Делаем что-то со свойствами объекта
+//   console.log(book.title);
+//   console.log(book.numberOfPages);
+//   // И так далее
+// }
+// Тогда во время её вызова передаём один объект с необходимыми свойствами.
+
+// // ✅ Всё понятно
+// doStuffWithBook({
+//   title: "Последнее королевство",
+//   numberOfPages: 736,
+//   downloads: 10283,
+//   rating: 8.38,
+//   public: true,
+// });
+// Ещё один плюс в том, что можно деструктуризировать объект в параметре book.
+
+// // Это можно сделать в теле функции.
+// function doStuffWithBook(book) {
+//   const { title, numberOfPages, downloads, rating, public } = book;
+//   console.log(title);
+//   console.log(numberOfPages);
+//   // И так далее
+// }
+
+// // Или в сигнатуре (подписи), разницы нет.
+// function doStuffWithBook({ title, numberOfPages, downloads, rating, public }) {
+//   console.log(title);
+//   console.log(numberOfPages);
+//   // И так далее
+// }
+
+// Change code below this line
+// function calculateMeanTemperature(forecast) {
+//   const {
+//     today: { low: todayLow, high: todayHigh },
+//     tomorrow: { low: tomorrowLow, high: tomorrowHigh },
+//   } = forecast;
+//   // const todayLow = forecast.today.low;
+//   // const todayHigh = forecast.today.high;
+//   // const tomorrowLow = forecast.tomorrow.low;
+//   // const tomorrowHigh = forecast.tomorrow.high;
+
+//   // Change code above this line
+//   return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
+// }
+
+// console.log(calculateMeanTemperature({ today: { low: 28, high: 32 }, tomorrow: { low: 25, high: 29 } }));
+// console.log(calculateMeanTemperature({ today: { low: 37, high: 40 }, tomorrow: { low: 33, high: 38 } }));
+
+// ЗАДАЧА 27
+// Синтаксис ... (spread) позволяет распылить коллекцию элементов (массив, строку или объект) в место, где ожидается набор отдельных значений. Конечно есть некоторые ограничения, например нельзя распылить массив в объект и наоборот.
+
+// Можно привести аналогию с ящиком яблок. Поставив ящик на пол не вынимая из него яблоки, получим аналог массива значений. Если высыпать яблоки из ящика на пол, произойдёт распыление - набор отдельных значений.
+
+// Отличие всего одно - в JavaScript распыление не изменяет оригинальную коллекцию, то есть делается копия каждого элемента. После распыления останется и ящик полный яблок, и копия каждого яблока на полу.
+
+// Например, метод Math.max(аргументы) ищет и возвращает самый большой из аргументов (чисел), то есть ожидает не массив значений, а произвольное количество аргументов.
+
+// const temps = [14, -4, 25, 8, 11];
+
+// // В консоли будет массив
+// console.log(temps);
+// // ❌ Так не сработает, потому что передаём целый массив
+// console.log(Math.max(temps)); // NaN
+
+// // В консоли будет набор отдельных чисел
+// console.log(...temps);
+// // ✅ Распылим коллекцию элементов как отдельные аргументы
+// console.log(Math.max(...temps)); // 25
+// То есть запись Math.max(...[14, -4, 25, 8, 11]), после интерпретации превращается в Math.max(14, -4, 25, 8, 11) - синтаксис ... возвращает распакованный массив, то есть распыляет его элементы как отдельные аргументы.
+
+// const scores = [89, 64, 42, 17, 93, 51, 26];
+// // Change code below this line
+// const bestScore = Math.max(...scores);
+// const worstScore = Math.min(...scores);
+
+// ЗАДАЧА 28
+
 // ЗАДАЧА 34
 // До сих пор мы рассматривали объекты только как хранилища взаимосвязанных данных, например информация о книге и т. п. Объекты-хранилища обычно находятся в массиве таких же объектов, который представляет коллекцию однотипных элементов.
 
